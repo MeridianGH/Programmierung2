@@ -1,4 +1,4 @@
-package edu.htwk.romacker;
+package edu.htwk.fdit.romacker;
 
 public class Fraction {
     private int numerator;
@@ -45,7 +45,7 @@ public class Fraction {
     public Fraction divide(Fraction divisor) {
         this.numerator *= divisor.denominator;
         this.denominator *= divisor.numerator;
-        // or this.multiply(this.reciprocal);
+        // or this.multiply(this.reciprocal());
         this.reduce();
         return this;
     }
@@ -55,9 +55,16 @@ public class Fraction {
     }
 
     public Fraction reduce() {
+        if (this.numerator < 0 && this.denominator < 0) { this.extend(-1); }
         int gcd = Math.abs(calculateGCD(this.numerator, this.denominator));
         this.numerator /= gcd;
         this.denominator /= gcd;
+        return this;
+    }
+
+    public Fraction extend(int factor) {
+        this.numerator *= factor;
+        this.denominator *= factor;
         return this;
     }
 
@@ -78,5 +85,22 @@ public class Fraction {
 
     private int calculateGCD(int a, int b) {
         return b == 0 ? a : calculateGCD(b, a % b);
+    }
+
+    public int getNumerator() {
+        return this.numerator;
+    }
+
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
+    }
+
+    public int getDenominator() {
+        return this.denominator;
+    }
+
+    public void setDenominator(int denominator) throws ArithmeticException {
+        if (denominator == 0) { throw new ArithmeticException("Denominator cannot be 0."); }
+        this.denominator = denominator;
     }
 }
