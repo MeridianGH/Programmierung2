@@ -53,21 +53,6 @@ public class SimpleLinkedList {
         return index;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder s = new StringBuilder("[");
-        Element e = this.head;
-        while (true) {
-            if (e == null) {
-                s.append("null]");
-                break;
-            }
-            s.append(e).append(" -> ");
-            e = e.next;
-        }
-        return s.toString();
-    }
-
     public Object last() {
         return this.get(this.size() - 1);
     }
@@ -104,6 +89,21 @@ public class SimpleLinkedList {
         }
 
         this.size--;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder("[");
+        Element e = this.head;
+        while (true) {
+            if (e == null) {
+                s.append("null]");
+                break;
+            }
+            s.append(e).append(" -> ");
+            e = e.next;
+        }
+        return s.toString();
     }
 
     private static class Element {
