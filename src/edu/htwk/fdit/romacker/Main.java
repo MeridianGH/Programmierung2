@@ -1,8 +1,12 @@
 package edu.htwk.fdit.romacker;
 
+import edu.htwk.fdit.romacker.refactor.*;
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
-/*      Task 1
+/*
+        // Task 1
         Fraction a = new Fraction(1, 4);
         Fraction b = new Fraction(2, 10);
         Fraction c = new Fraction(1, -3);
@@ -19,8 +23,8 @@ public class Main {
 
         // Most methods of Fraction allow for chaining:
         System.out.println(a.add(b).subtract(c).multiply(a).divide(b));
- */
-
+*/
+/*
         // Task 2
         SimpleLinkedList list = new SimpleLinkedList("a", "b", "c", "d");
         System.out.println(list + " | " + list.size());
@@ -42,5 +46,16 @@ public class Main {
         System.out.println(emptyList);
         emptyList.append(1);
         System.out.println(emptyList);
+*/
+        // Task 3
+        Person max = new Person("Max", "Mustermann", 1, 2, 1985, "Musterstraße", "1", "12345", "Musterstadt", "Deutschland", "DE12345678901234567890", "ABCDEF12GHI");
+        System.out.println(max);
+
+        // Alternative:
+        LocalDate date = LocalDate.of(1983, 8, 12);
+        Address address = new Address("Musterstraße", "1", "12345", "Musterstadt", "Deutschland");
+        BankAccount bankAccount = new BankAccount("DE12345678901234567890", "ABCDEF12GHI");
+        Person erika = new Person("Erika", "Mustermann", date, address, bankAccount);
+        System.out.println(erika);
     }
 }
