@@ -3,9 +3,9 @@ package edu.htwk.fdit.romacker.tictactoe;
 import java.util.Scanner;
 
 public class Board {
-    private int size = 3;
+    private final int size;
 
-    private char[][] field;
+    private final char[][] field;
 
     public Board(int size) {
         this.size = size;

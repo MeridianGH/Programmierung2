@@ -6,6 +6,7 @@ import edu.htwk.fdit.romacker.tictactoe.TicTacToe;
 import java.time.LocalDate;
 
 public class Main {
+    @SuppressWarnings("CommentedOutCode")
     public static void main(String[] args) {
         /*
         // Task 1
@@ -48,7 +49,7 @@ public class Main {
         System.out.println(emptyList);
         emptyList.append(1);
         System.out.println(emptyList);
-*/
+        */
         /*
         // Task 3
         Person max = new Person("Max", "Mustermann", 1, 2, 1985, "Musterstraße", "1", "12345", "Musterstadt", "Deutschland", "DE12345678901234567890", "ABCDEF12GHI");
@@ -59,7 +60,9 @@ public class Main {
         Address address = new Address("Musterstraße", "1", "12345", "Musterstadt", "Deutschland");
         BankAccount bankAccount = new BankAccount("DE12345678901234567890", "ABCDEF12GHI");
         Person erika = new Person("Erika", "Mustermann", date, address, bankAccount);
-        System.out.println(erika);*/
+        System.out.println(erika);
+        */
+
         // Task 4
         TicTacToe game = new TicTacToe(3, 2);
         game.start();
