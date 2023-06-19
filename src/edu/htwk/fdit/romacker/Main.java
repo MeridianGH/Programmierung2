@@ -62,9 +62,13 @@ public class Main {
         Person erika = new Person("Erika", "Mustermann", date, address, bankAccount);
         System.out.println(erika);
         */
-
-        // Task 4
+        /*
+        // Task 5
         TicTacToe game = new TicTacToe(3, 2);
         game.start();
+        */
+
+        // Task 6
+        Cards.main(args);
     }
 }
