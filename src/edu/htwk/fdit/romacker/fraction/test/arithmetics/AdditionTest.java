@@ -1,6 +1,6 @@
 package edu.htwk.fdit.romacker.fraction.test.arithmetics;
 
-import edu.htwk.fdit.romacker.main.Fraction;
+import edu.htwk.fdit.romacker.fraction.main.Fraction;
 
 import org.junit.jupiter.api.Test;
 
