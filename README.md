@@ -11,3 +11,4 @@ Dateien und Aufgaben aus der Vorlesung und den Übungen.
 3. [Refactoring](src/edu/htwk/fdit/romacker/refactor)
 4. [equals und compare](src/edu/htwk/fdit/romacker/fraction)
 5. [Tic Tac Toe](src/edu/htwk/fdit/romacker/tictactoe)
+6. [Cards](src/edu/htwk/fdit/romacker/Cards.java)
