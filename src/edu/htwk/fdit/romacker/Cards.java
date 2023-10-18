@@ -139,8 +139,7 @@ class MauMau implements MauMauable {
 
 }
 
-class MauMauExt implements MauMauable {
-  Card top;
+class MauMauExt extends MauMau {
   Color color;
   int penalty = 0;
   boolean skip = false;
@@ -194,17 +193,6 @@ class MauMauExt implements MauMauable {
       System.out.println("current color: " + m.color());
     }
   }
-
-  @Override
-  public Card top() {
-    return top;
-  }
-
-  @Override
-  public String toString() {
-    return "# top-card: " + top + (color != top.color ? " color: " + color : "");
-  }
-
 }
 
 
